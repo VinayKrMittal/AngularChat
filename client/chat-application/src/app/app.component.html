@@ -1,0 +1,24 @@
+<div style="text-align:center" class="container">
+  <h3>
+    Welcome to Client - Server Chat App &#x263A;
+  </h3>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Client Messages &#x263A; </h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let msg of chats">
+    <span class="badge" [ngClass]="{'badge-primary': msg.sent , 'badge-success': !msg.sent }">{{msg.sent?"Sent":"Received"}}</span>
+        {{msg.msg}}
+    </li>
+ 
+  </ul>
+  <!-- <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> -->
+  <!-- {{chats | json}} -->
+</div>
+</div>
+
